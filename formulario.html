@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form  method="post" enctype="text/plain"><!--secciion para realizar un formulario y existe dos metodos post permite enviar mas informacion
+        con get permite 500 bytes pero no permite con archivos adjuntos y se ven en la barra del navegador
+        con post no se pueden ver facilmente-->
+        <fieldset><!--agrupa elementos en un formulario-->
+            <legend>
+                    Informacion del cliente
+            </legend><!--define el nombre de la etiqueta-->
+            <label for="Usuario">
+            Nombre del usuario
+            </label><br>
+            <input type="text" name="Usuario" id="Usuario" maxlength="12" placeholder="Usuario" size="5" title="Usuario"><br>
+            <label for="Nombre">
+                Nombre del usuario
+                </label><br>
+                <input type="text" name="Nombre" id="Nombre" maxlength="12" placeholder="Nombre" size="5" title="Nombre del Usuario"><br>
+                <label for="Usuario">
+                 Apeido paterno del usuario
+                </label><br>
+                 <input type="text" name="ap" id="ap" maxlength="12" placeholder="Apeido paterno" size="5" title="Apeido paterno del Usuario"><br>
+                 <label for="Usuario">
+                Apeido materno del usuario
+                </label><br>
+                <input type="text" name="am" id="am" maxlength="12" placeholder="Apeido materno" size="5" title="Apeido materno del Usuario"><br>
+                <label for="pass">
+                    contraseña
+                </label> <br>
+                <input type="password" name="pass" id="pass" maxlength="10" size="10" title="contraseña" required/><br>
+                <label for="sugiere">
+                    sugerencias
+                </label><br/>
+                <textarea name="sugiere" cols="25" rows="10"></textarea><br>
+                <label for="correo">E-mail</label><br>
+                <input type="email" name="correo" id="correo" placeholder="correo electronico" required/><br>
+                <label for="fechan">fecha de nacimiento</label><br>
+                <input type="date" name="fechan" id="fechan" placeholder="fecha de nacimiento" required/><br>
+                <label for="Hora">Hora de registro</label>
+                <input type="time" name="Hora" id="Hora"/><br/>
+                <label for="buscar">buscar</label><br/>
+                <input type="search" name="buscar" id="buscar"><br/>
+                <label for="telefono">Telefono</label><br/>
+                <input type="tel" name="telefono" id="telefono"><br/>
+                <label for="sitio">sitio web</label><br/>
+                <input type="url" name="sitio" id="sitio"/><br/>
+                <label for="edad">Edad</label><br/>
+                <input type="number" name="edad" id="edad"/><br/>
+                <label for="califica">califica el servicio</label><br/>
+                <label for="colores">color</label><br/>
+                <input type="color" name="colores" id="colores" /><br/>
+                <input type="range" min="1" max="10" value="7"/><br/>
+                <label for="mesn">mes de nacimiento</label><br/>
+                <input type="month" name="mesn" id="mesn" /><br/>
+                <label for="semana">semana</label><br/>
+                <input type="week" name="semana" name="semana"/><br/>
+                <label for="fechah">fecha y hora</label><br/>
+                <input type="datetime-local" name="fechah" id="fechah"/><br/>
+                <label for="pago">Ingresa el comprobante de pago</label><br>
+                <input type="file" name="pago" id="pago"/><br>
+                <h3>seleciona tu forma de pago preferido</h3><br>
+                <input type="checkbox" name="forma1" id="forma1" value="efe">
+                <label for="forma1">tarjeta de credito</label><br>
+                
+                <input type="checkbox" name="forma2" id="forma2" value="tdd">
+                <label for="forma2">Efectivo</label><br>
+                <input type="checkbox" name="forma3" id="forma3" value="td">
+                <label for="forma3">tarjeta de debito</label><br>
+                <h3>Indica tu genero</h3>
+                <input type="radio" name="genero" id="genero" value="f">
+                <label for="genero">Femenino</label>
+                <input type="radio" name="genero" id="genero" value="m">
+                <label for="genero">Masculino</label><br>
+                <h3>Indica tu preferencia</h3>
+                <select size="5" multiple>
+                    <optgroup label="Diversos">
+                    <option value="1">Electronica</option>
+                    <option value="2">Computadoras</option>
+                    <option value="3">Linea blanca</option>
+                    <option value="4">Ferreteria</option>
+                    <option value="5">Autos</option>
+                    <option value="6">Ropa</option>
+                </optgroup>
+                <OPtgroup label="Alimentos">
+                    <option value="7">Lacteos</option>
+                    <option value="8">Abarrotes</option>
+                </OPtgroup>
+                </select><br>
+                <label for="marca">marca del producto</label><br>
+                <input type="text" name="marca" id="marca" list="marcas"/>
+                <datalist id="marcas">
+                    <option >Mabe</option>
+                    <option >LG</option>
+                    <option >Samsumg</option>
+                    <option >Nokia</option>
+                    <option >Oster</option>
+                    <option >Lanix</option>
+                    <option >Sony</option>
+                </datalist>
+                <input type="reset" name="Borrar" id="Borrars">
+                <input type="submit" name="enviar" id="enviar" value="Enviar formulario">
+        </fieldset>
+    </form>
+</body>
+</html>
