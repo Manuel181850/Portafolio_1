@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinepolis</title>
+</head>
+<body>
+    <h1>CINEPOLIS</h1>
+    <form>
+        <fieldset>
+            <legend>Informacion del usuario</legend>
+            <label for="Usuario">Nombre del usuario</label><br>
+            <input type="text" name="Usuario" id="Usuario" maxlength="20" placeholder="Usuario" title="Usuario" required><br>
+            <label for="pass">contraseña</label> <br>
+            <input type="password" name="pass" id="pass" maxlength="10" size="10" title="contraseña" required/><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Lugar de ubicacion</legend>
+            <label for="est">Seleciona el estado</label><br>
+            <input type="text" name="est" id="est" list="ests"/>
+            <datalist id="ests">
+                <option >Estado de México</option>
+                <option >Nuevo leon</option>
+                <option >Jalisco</option>
+                <option >Guanajuato</option>
+                <option >San luis potosi</option>
+                <option >Ciudad De México</option>
+            </datalist><br>
+            <label for="suc">Seleciona tu sucursal</label><br>
+            <input type="text" name="suc" id="suc" list="sucs"/>
+            <datalist id="sucs">
+                <option >Sucursal centro</option>
+                <option >Sucursal norte</option>
+                <option >Sucursal sur</option>
+                <option >Sucursal este</option>
+                <option >Sucursal oeste</option>
+            </datalist>
+            <h3>Peliculas disponibles</h3>
+                <select size="8">
+                    <optgroup label="Comedia">
+                        <option value="1">Gato con botas</option>
+                        <option value="2">El triangulo de la tristesa</option>
+                        <option value="3">King regreso a casa</option>
+                    </optgroup>
+                    <optgroup label="Terror/Suspenso">
+                        <option value="4">Scream 6</option>
+                        <option value="5">Whinnie pool:Sangre y miel</option>
+                        <option value="6">13 Exorcismos</option>
+                    </optgroup>
+                    <optgroup label="Romance">
+                        <option value="7">Organizadora de bodas</option>
+                        <option value="8">Una hitoria de amor y deseo</option>
+                    </optgroup>
+                </select><br>
+                <label for="tick">¿Cuantos boletos desea comprar?</label><br>
+                <input type="number" name="tick" id="tick" title="boletos" size="4">
+                <h3>seleciona tu forma de pago preferido</h3>
+                <input type="checkbox" name="forma1" id="forma1" value="efe">
+                <label for="forma1">tarjeta de credito</label><br>
+                <input type="checkbox" name="forma2" id="forma2" value="tdd">
+                <label for="forma2">Efectivo</label><br>
+                <input type="checkbox" name="forma3" id="forma3" value="td">
+                <label for="forma3">tarjeta de debito</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Seleciona tu combo</legend>
+            <Table>
+                <tr>
+                    <td><h2>Palomitas</h2></td>
+                    <td><img src="P_Mant.jpg"><input type="radio" name="palomitas" id="palomitas" value="man"></td>
+                    <td><img src="P_Man_T.jpg"><input type="radio" name="palomitas" id="palomitas" value="tak"></td>
+                    <td><img src="P_Car.jpg"><input type="radio" name="palomitas" id="palomitas" value="car"></td>
+                </tr>
+                <tr>
+                    <td><h2>Tamaño</h2></td>
+                    <td><h3>Chico <input type="radio" name="tam" id="tam" value="Chi"></h3></td>
+                    <td><h3>Mediano <input type="radio" name="tam" id="tam" value="Med"></h3></td>
+                    <td><h3>Grande <input type="radio" name="tam" id="tam" value="Gra"></h3></td>
+                </tr>
+            </Table>
+            <label for="com">¿Cuantos combos desea comprar?</label><br>
+            <input type="number" name="com" id="com" title="Cantidad de combos" size="4">
+        </fieldset>
+        <input type="reset" name="Borrar" id="Borrars">
+        <input type="submit" name="enviar" id="enviar" value="Enviar formulario">
+        </form>
+</body>
+</html>
