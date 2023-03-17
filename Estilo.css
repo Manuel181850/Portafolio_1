@@ -1,0 +1,17 @@
+*{
+    background-color: rgb(218, 238, 188);
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.link{
+    color: rgb(144, 13, 238);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.texto{
+    color: rgb(0, 184, 0);
+    font-family: 'Courier New', Courier, monospace;
+}
