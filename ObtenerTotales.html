@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+	<link rel="stylesheet" href="ObtenerTotales.css">
+</head>
+<script>
+var total;
+function califica()//funcion determinada para realizar el conteo de la puntuacion de las respuestas dadas por el usuario
+    {var total=0;
+    	for (var x=1;x<=4;x++)//ciclo que pasa de pregunta en pregunta 
+    	{
+        var res=0;
+        var nom="r"+x;//variable que se encarga de identificar la pregunta
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)//ciclo que se encarga en pasar por cada respuesta y verificar si es correcta o incorecta
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;//almacena el puntaje del usuario
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";//encargado de la imprecion de los resutados
+        }
+        if(total==20)//compara y comenta al usuario su estatus de como fue su evaluacion
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Tu opinión es importante</h2>
+<form>
+<div>
+	
+	<ul>
+
+		<li>¿Cuanto es el valor de π?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>3.1416<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>3.1416<br/>
+		<input type="radio" name="r1" id="r1" value="5"/>3.141592<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>3.141522<br/>
+		
+		<li>¿Cuanto es el valor de e?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>2,81828<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>2,71828<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>2,72828<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>2,7183<br/>
+
+		<li>¿cual es el teorema de pitagoras?</li>
+		<input type="radio" name="r3" id="r3" value="5"/>hipotenusa^2=c_opuesto^2+c_adyasente^2<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>hipotenusa^2=c_opuesto^2-c_adyasente^2<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>hipotenusa=c_opuesto^2+c_adyasente^2<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>hipotenusa^2=c_opuesto+c_adyasente<br/>
+
+        <li>¿Cual es la suma total de los angulos internos de un triangulo?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>90°<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>360°<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>180°<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>270°<br/>
+	</ul>
+	
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+</form>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
